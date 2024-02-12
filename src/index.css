@@ -1,0 +1,19 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.app{
+    /* border: 1px solid; */
+    width: fit-content;
+    margin: 2rem auto;
+}
+h1{
+    margin: 2rem;
+}
+input{
+
+}
+ol{
+    margin: 1rem;
+}
