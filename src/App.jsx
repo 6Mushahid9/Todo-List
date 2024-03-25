@@ -38,15 +38,19 @@ function App(){
     return(
         <div className="app">
             <h1>TODO LIST</h1>
-            <div>
-                <input type="text" placeholder="Enter task" value={task} onChange={inputHandler}/>
-                <button onClick={addHandler}>Add</button>
+            <div className="addTask">
+                <div className="textInputWrapper">
+                    <input className="textInput" type="text" placeholder="Enter task" value={task} onChange={inputHandler}/>
+                </div>
+                <button className="addButton" onClick={addHandler}>Add</button>
             </div>
             <ol>
                 {bundle.map((task, index) => <li key={index}>{task}
-                                            <button onClick={() => delHandler(index)}>Delete</button>
-                                            <button onClick={() => upHandler(index)}>Up</button>
-                                            <button onClick={() => downHandler(index)}>Down</button></li>)}
+                                            <div className="buttons">
+                                                <button className="move" onClick={() => upHandler(index)}>☝🏽</button>
+                                                <button className="move" onClick={() => downHandler(index)}>👇🏽</button>
+                                                <button className="deleteButton" onClick={() => delHandler(index)}>❌</button>
+                                            </div></li>)}
             </ol>
         </div>
     ); 
